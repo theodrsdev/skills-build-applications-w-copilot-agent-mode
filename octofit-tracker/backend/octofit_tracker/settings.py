@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-hipjx+_n_w$_*w3q!4gtd#oq-9qil^&-!)*o8dna4l0^=!nd@9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# Allow host access to Codespace URL and localhost
+ALLOWED_HOSTS = ['fictional-potato-g475v59r6qv4fpwj-8000.app.github.dev', 'localhost']
 
 
 # Application definition
@@ -39,6 +40,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tracker",  # Add the tracker app to the installed apps
     'corsheaders',
+]
+
+INSTALLED_APPS += [
+    'octofit_tracker.tracker',
 ]
 
 MIDDLEWARE = [

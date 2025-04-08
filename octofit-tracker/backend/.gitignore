@@ -1,0 +1,9 @@
+# Ignore database files and logs
+data/
+*.log
+*.lock
+*.wt
+*.bson
+*.turtle
+journal/
+diagnostic.data/
